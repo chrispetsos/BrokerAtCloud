@@ -983,10 +983,10 @@ public class PolicyCompletenessCompliance {
 						throw new ComplianceException(sdInstance + " is the successor of an SD which does not declare a validFrom property.");
 					}
 					
-					if(!validFrom.after(validFromOfSucceeded))
+					if(validFrom.before(validFromOfSucceeded))
 					{
-						writeMessageToComplianceReport(sdInstance + " declares a validFrom property (" + validFrom + ") which is not after validFrom of succeeded SD (" + validFromOfSucceeded + ").");
-						throw new ComplianceException(sdInstance + " declares a validFrom property (" + validFrom + ") which is not after validFrom of succeeded SD (" + validFromOfSucceeded + ").");
+						writeMessageToComplianceReport(sdInstance + " declares a validFrom property (" + validFrom + ") which is before validFrom of succeeded SD (" + validFromOfSucceeded + ").");
+						throw new ComplianceException(sdInstance + " declares a validFrom property (" + validFrom + ") which is before validFrom of succeeded SD (" + validFromOfSucceeded + ").");
 					}
 					
 					/*
