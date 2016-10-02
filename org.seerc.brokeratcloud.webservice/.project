@@ -5,6 +5,7 @@
 	<projects>
 		<project>MessageBroker</project>
 		<project>PolicyCompletenessCompliance</project>
+		<project>SwaggerWebFragment</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
